@@ -1,54 +1,31 @@
 name: Build and Deploy Hexo Blog
 
-
-
-
 on:
   push:
     branches:
       - main  # 觸發工作流的分支
 
-
-
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest  # 運行環境
 
-
-
-
     steps:
     - name: Checkout
       uses: actions/checkout@v2  # 檢出代碼
-
-
-
 
     - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
         node-version: '20'  # 設置 Node.js 版本
 
-
-
-
     - name: Install Dependencies
       run: npm install  # 安裝依賴
 
-
-
-
     - name: Build Hexo Site
       run: npx hexo generate  # 生成靜態文件
-
-
-
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub Token 進行部署
         publish_dir: ./public  # 靜態文件目錄
-
-
