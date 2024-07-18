@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
+title: jason's 程式技術研究
+subtitle: 'JS技術BLOG'
+description: '介紹各項 Javascript 技術, 套件, 工具'
+keywords: Javascript
+author: jason chiou
 language: en
 timezone: ''
 
